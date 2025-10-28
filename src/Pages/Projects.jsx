@@ -1,7 +1,8 @@
 import React from "react";
+import { FaGithub } from "react-icons/fa";
 import project1Img from "../assets/project1.png";
-// import project2Img from "../assets/project2.png";
-// import project3Img from "../assets/project3.png";
+import project2Img from "../assets/project1.png";
+import project3Img from "../assets/project1.png";
 
 const projects = [
   {
@@ -14,14 +15,14 @@ const projects = [
   {
     title: "Weather Dashboard",
     description: "A calm weather app with gentle animations and live updates.",
-    // image: project2Img,
+    image: project2Img,
     tech: ["HTML", "CSS", "JavaScript", "OpenWeather API"],
     github: "https://github.com/yourusername/weather-dashboard",
   },
   {
     title: "Portfolio Website",
     description: "This exact site — built with good vibes and coffee ☕.",
-    // image: project3Img,
+    image: project3Img,
     tech: ["React", "Vite", "TailwindCSS"],
     github: "https://github.com/yourusername/personal-website",
   },
@@ -72,9 +73,10 @@ const Projects = () => {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-[#C8E4B2] hover:bg-[#B6DFA7] text-[#3D3D3D] font-semibold px-4 py-2 rounded-lg transition-colors duration-200"
+                  className="inline-flex items-center gap-2 bg-[#C8E4B2] hover:bg-[#B6DFA7] text-[#3D3D3D] font-semibold px-4 py-2 rounded-lg transition-colors duration-200"
                 >
-                  GitHub →
+                  <FaGithub className="text-xl" />
+                  GitHub
                 </a>
               </div>
             </div>

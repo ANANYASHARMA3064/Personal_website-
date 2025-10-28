@@ -1,5 +1,7 @@
 import React from "react";
-import image from "../assets/image.jpeg"; // adjust this path if needed
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import image from "../assets/image.jpeg";
 
 const About = () => {
   return (
@@ -17,6 +19,32 @@ const About = () => {
         <p className="text-lg leading-relaxed">
           This site was vibe-coded — but trust me, I can make it myself too 😎
         </p>
+
+        {/* Social icons */}
+        <div className="flex space-x-4 mt-4">
+          <a
+            href="mailto:your.email@example.com"
+            className="text-2xl text-primary dark:text-accent hover:text-secondary transition"
+          >
+            <MdEmail />
+          </a>
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-2xl text-primary dark:text-accent hover:text-secondary transition"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-2xl text-primary dark:text-accent hover:text-secondary transition"
+          >
+            <FaLinkedin />
+          </a>
+        </div>
       </div>
 
       {/* Right side — Circle image */}
@@ -32,4 +60,3 @@ const About = () => {
 };
 
 export default About;
-
