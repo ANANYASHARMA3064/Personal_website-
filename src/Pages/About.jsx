@@ -50,10 +50,11 @@ const About = () => {
       {/* Right side — Circle image */}
       <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
         <img
-          src={image}
-          alt="Ananya"
-          className="w-80 h-80 object-cover rounded-full shadow-lg border-4 border-primary"
-        />
+  src={image}
+  alt="Ananya"
+  className="w-[25rem] h-[25rem] object-cover rounded-full shadow-lg border-4 border-primary"
+/>
+
       </div>
     </section>
   );
