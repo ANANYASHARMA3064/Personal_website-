@@ -4,7 +4,10 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary dark:bg-gray-800 text-white py-6 mt-16 rounded-t-xl shadow-inner">
+    <footer className="flex justify-between items-center p-6 rounded-b-xl shadow-md
+    bg-gradient-to-r from-[#FFC1C1] via-[#FFB3B3] to-[#FFA5A5] 
+    dark:bg-gradient-to-r dark:from-[#5D4E7A] dark:via-[#6E5D8A] dark:to-[#7F6C9A]
+    text-gray-800 dark:text-white">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-6">
         <p className="text-sm mb-4 md:mb-0">
           © 2025 Ananya Sharma. Built by me with ❤️ — vibe-coded vibes optional 😎
