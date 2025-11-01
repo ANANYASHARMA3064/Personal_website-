@@ -10,7 +10,7 @@ const Footer = () => {
     text-gray-800 dark:text-white">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-6">
         <p className="text-sm mb-4 md:mb-0">
-          © 2025 Ananya Sharma. Built by me with ❤️ — vibe-coded vibes optional 😎
+          © 2025 Ananya Sharma.😎
         </p>
         <div className="flex space-x-4 text-2xl">
           <a
