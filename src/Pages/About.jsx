@@ -12,9 +12,7 @@ const About = () => {
           About Me
         </h1>
         <p className="text-lg leading-relaxed">
-          Hi, I’m Ananya Sharma — a software engineering student at McMaster
-          University passionate about full-stack development and cloud
-          engineering. I love building modern, clean, and efficient web apps.
+          Hi! I am Ananya, a second year software engineering student at McMaster University.
         </p>
         <p className="text-lg leading-relaxed">
           This site was vibe-coded — but trust me, I can make it myself too 😎

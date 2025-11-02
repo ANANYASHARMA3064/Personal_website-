@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { FaTrophy } from "react-icons/fa";
 import hack1Img from "../assets/image.jpeg";
 import hack2Img from "../assets/image.jpeg";
@@ -34,63 +35,106 @@ const hackathons = [
   },
 ];
 
-const Hackathons = () => {
-  return (
-    <div className="min-h-screen bg-[#FFF8F0] dark:bg-[#1B1B1F] text-[#3D3D3D] dark:text-gray-100 p-10">
-      <h1 className="text-5xl font-fancy text-center mb-10 text-[#D4A5A5] dark:text-[#AEC6CF]">
-        Hackathons
-      </h1>
+// Updated container and bubble size
+const containerWidth = 600;
+const containerHeight = 600;
+const bubbleSize = 180;
 
-      {/* Intro Section */}
-      <div className="max-w-3xl mx-auto mb-12 text-center">
-        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+const generatePositions = (count) => {
+  const positions = [];
+  const maxAttempts = 1000;
+
+  for (let i = 0; i < count; i++) {
+    let attempts = 0;
+    let valid = false;
+    let x = 0;
+    let y = 0;
+
+    while (!valid && attempts < maxAttempts) {
+      x = Math.random() * (containerWidth - bubbleSize);
+      y = Math.random() * (containerHeight - bubbleSize);
+
+      valid = positions.every(
+        (pos) =>
+          Math.hypot(pos.x - x, pos.y - y) > bubbleSize // prevent overlap
+      );
+
+      attempts++;
+    }
+
+    positions.push({ x, y });
+  }
+
+  return positions;
+};
+
+const Hackathons = () => {
+  const [positions, setPositions] = useState([]);
+
+  useEffect(() => {
+    setPositions(generatePositions(hackathons.length));
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-[#FFF8F0] dark:bg-[#1B1B1F] text-[#3D3D3D] dark:text-gray-100 px-10 py-16 flex flex-col lg:flex-row gap-16 relative">
+      {/* Left Section - Centered */}
+      <div className="lg:w-1/2 flex flex-col items-center justify-center text-center lg:text-center">
+        <h1 className="text-6xl font-fancy mb-6 text-[#D4A5A5] dark:text-[#AEC6CF]">
+          Hackathons
+        </h1>
+        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-xl">
           I absolutely love going to hackathons — they’re where I meet inspiring
           women in tech, learn from hands-on experiences, and get motivated to
-          chase my big software engineering dreams. From volunteering at
-          <span className="text-[#C2A7E2] font-semibold"> DeltaHacks</span> to
+          chase my big software engineering dreams. From volunteering at{" "}
+          <span className="text-[#C2A7E2] font-semibold">DeltaHacks</span> to
           attending <span className="text-[#A7C7A9] font-semibold">ElleHacks</span>,
           each event has helped me grow and find my path in tech.
         </p>
       </div>
 
-      {/* Cards Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        {hackathons.map((hack, index) => (
-          <div
-            key={index}
-            className="bg-[#FFF5E4] dark:bg-[#2D2A32] rounded-3xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-[#f6e7de]/60 dark:border-[#444]"
+      {/* Right Section - Floating Bubbles */}
+      <div
+        className="lg:w-1/2 relative"
+        style={{ width: containerWidth, height: containerHeight }}
+      >
+        {positions.map((pos, i) => (
+          <motion.a
+            key={i}
+            href={hackathons[i].link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute block"
+            style={{ top: pos.y, left: pos.x }}
+            animate={{
+              x: [0, Math.random() * 80 - 40, 0],
+              y: [0, Math.random() * 80 - 40, 0],
+            }}
+            transition={{
+              duration: 6 + Math.random() * 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
           >
-            <img
-              src={hack.image}
-              alt={hack.name}
-              className="w-full h-48 object-cover rounded-t-3xl"
-            />
-            <div className="p-6 flex flex-col justify-between flex-grow">
-              <div>
-                <h2 className="text-2xl font-bold text-[#C2A7E2] dark:text-[#BFA2DB] mb-2">
-                  {hack.name}
-                </h2>
-                <p className="text-gray-600 dark:text-gray-300 mb-2 text-sm italic">
-                  {hack.date} — {hack.role}
-                </p>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  {hack.description}
-                </p>
-              </div>
-
-              <div className="mt-auto">
-                <a
-                  href={hack.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#C8E4B2] hover:bg-[#B6DFA7] text-[#3D3D3D] font-semibold px-4 py-2 rounded-lg transition-colors duration-200"
-                >
-                  <FaTrophy className="text-xl" />
-                  View Event
-                </a>
-              </div>
+            {/* Bubble Circle */}
+            <div className="relative w-[180px] h-[180px] bg-[#FFF5E4] dark:bg-[#2D2A32] rounded-full shadow-lg overflow-hidden border border-[#f6e7de]/60 dark:border-[#444]">
+              <img
+                src={hackathons[i].image}
+                alt={hackathons[i].name}
+                className="w-full h-full object-cover rounded-full opacity-80 transition duration-300"
+              />
             </div>
-          </div>
+
+            {/* Text Below Bubble */}
+            <div className="mt-3 text-center">
+              <h2 className="text-sm font-bold text-[#C2A7E2] dark:text-[#BFA2DB]">
+                {hackathons[i].name}
+              </h2>
+              <p className="text-xs text-gray-600 dark:text-gray-400 italic">
+                {hackathons[i].date} — {hackathons[i].role}
+              </p>
+              <FaTrophy className="text-[#C8E4B2] dark:text-[#B6DFA7] text-sm mx-auto mt-1" />
+            </div>
+          </motion.a>
         ))}
       </div>
     </div>
