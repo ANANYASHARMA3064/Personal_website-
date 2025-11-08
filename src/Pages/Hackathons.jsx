@@ -33,6 +33,15 @@ const hackathons = [
     date: "September 2025",
     link: "https://hackthenorth.com",
   },
+  {
+    name: "MEC McMaster 2025",
+    description:
+      "Participated in MEC McMaster, collaborated with peers, and explored creative project ideas.",
+    image: mecImg,
+    role: "Participant",
+    date: "March 2025",
+    link: "https://mecmcmaster.com", // replace with actual link
+  },
 ];
 
 // Updated container and bubble size
