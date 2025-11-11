@@ -4,6 +4,7 @@ import { FaTrophy } from "react-icons/fa";
 import hack1Img from "../assets/image.jpeg";
 import hack2Img from "../assets/image.jpeg";
 import hack3Img from "../assets/image.jpeg";
+import mecImg from "../assets/image.jpeg";
 
 const hackathons = [
   {
