@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaTrophy } from "react-icons/fa";
-import hack1Img from "../assets/image.jpeg";
-import hack2Img from "../assets/image.jpeg";
+import hack1Img from "../assets/DeltaHacks.png";
+import hack2Img from "../assets/ElleHacks.png";
 import hack3Img from "../assets/image.jpeg";
-import mecImg from "../assets/image.jpeg";
+import mecImg from "../assets/Mec.png";
 
 const hackathons = [
   {
@@ -42,6 +42,15 @@ const hackathons = [
     role: "Participant",
     date: "March 2025",
     link: "https://mecmcmaster.com", // replace with actual link
+  },
+  {
+    name: "DeltaHacks XI",
+    description:
+      "Volunteered and helped manage the event. Met inspiring women in tech who motivated me to grow as a developer.",
+    image: hack1Img,
+    role: "participant",
+    date: "January 2025",
+    link: "https://deltahacks.com",
   },
 ];
 
