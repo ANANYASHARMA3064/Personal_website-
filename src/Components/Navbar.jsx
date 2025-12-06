@@ -9,10 +9,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     text-gray-800 dark:text-white">
   <div className="text-2xl">🐼</div>
   <div className="space-x-4">
-    <Link to="/" className="hover:text-accent transition">About</Link>
-    <Link to="/projects" className="hover:text-accent transition">Projects</Link>
-    <Link to="/blogs" className="hover:text-accent transition">Blogs</Link>
-    <Link to="/hackathons" className="hover:text-accent transition">Hackathons</Link>
+    <Link to="/" className="hover:text-white dark:hover:text-accent transition">About</Link>
+<Link to="/projects" className="hover:text-white dark:hover:text-accent transition">Projects</Link>
+<Link to="/blogs" className="hover:text-white dark:hover:text-accent transition">Blogs</Link>
+<Link to="/hackathons" className="hover:text-white dark:hover:text-accent transition">Hackathons</Link>
     <button
       onClick={() => setDarkMode(!darkMode)}
       className="px-3 py-1 rounded bg-primary text-white font-semibold hover:bg-accent transition-colors"
