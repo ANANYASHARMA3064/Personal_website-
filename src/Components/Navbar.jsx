@@ -7,7 +7,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     bg-gradient-to-r from-[#FFC1C1] via-[#FFB3B3] to-[#FFA5A5] 
     dark:bg-gradient-to-r dark:from-[#5D4E7A] dark:via-[#6E5D8A] dark:to-[#7F6C9A]
     text-gray-800 dark:text-white">
-  <div className="text-2xl">🐼</div>
+  <div className="text-5xl">🐼</div>
   <div className="space-x-4">
     <Link to="/" className="hover:text-white dark:hover:text-accent transition">About</Link>
 <Link to="/projects" className="hover:text-white dark:hover:text-accent transition">Projects</Link>
