@@ -37,13 +37,13 @@ const About = () => {
           {/* Social icons */}
           <div className="flex space-x-4 mt-4">
             <a
-              href="mailto:your.email@example.com"
+              href="shara281@mcmaster.ca"
               className="text-3xl text-pink-500 dark:text-pink-300 hover:scale-125 transition-transform"
             >
               <MdEmail />
             </a>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/ANANYASHARMA3064"
               target="_blank"
               rel="noopener noreferrer"
               className="text-3xl text-pink-500 dark:text-pink-300 hover:scale-125 transition-transform"
@@ -51,7 +51,7 @@ const About = () => {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/ananya-sharma-463b53344/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-3xl text-pink-500 dark:text-pink-300 hover:scale-125 transition-transform"
