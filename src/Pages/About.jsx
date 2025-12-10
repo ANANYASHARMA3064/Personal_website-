@@ -24,7 +24,7 @@ const About = () => {
         {/* Left side — Text content */}
         <div className="md:w-1/2 text-left space-y-6">
           <h1 className="font-fancy text-5xl font-bold text-pink-600 dark:text-pink-300 mb-4">
-            About Me
+            About 
           </h1>
           <p className="text-lg leading-relaxed">
             Hi! I’m <span className="font-semibold text-pink-500">Ananya</span>,
