@@ -42,7 +42,7 @@ const hackathons = [
     image: mecImg,
     role: "Participant",
     date: "March 2025",
-    link: "https://mecmcmaster.com", // replace with actual link
+    link: "https://www.instagram.com/macengcomp/?hl=en", // replace with actual link
   },
   {
     name: "DeltaHacks XI",
