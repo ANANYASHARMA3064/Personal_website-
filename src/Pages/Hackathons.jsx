@@ -50,7 +50,7 @@ const hackathons = [
       "Volunteered and helped manage the event. Met inspiring women in tech who motivated me to grow as a developer.",
     image: hack1Img,
     role: "participant",
-    date: "January 2025",
+    date: "January 2026",
     link: "https://deltahacks.com",
   },
 ];
