@@ -6,23 +6,23 @@ import blog3Img from "../assets/image.jpeg";
 
 const blogs = [
   {
-    title: "How I Built My First React App",
+    title: "same same but different ",
     description:
-      "A breakdown of how I turned confusion into creation — my first experience building with React.",
+      "describing 2 women with different choices ",
     image: blog1Img,
-    date: "October 15, 2025",
+    date: "Jan 2026",
     link: "https://yourbloglink.com/react-app-journey",
   },
   {
-    title: "Balancing Code and College",
+    title: "papa",
     description:
-      "Being a software engineering student means learning to juggle deadlines, debugging, and dorm life.",
+      "papa bear",
     image: blog2Img,
     date: "September 30, 2025",
     link: "https://yourbloglink.com/code-and-college",
   },
   {
-    title: "Why I Love Frontend Development",
+    title: "uhh ?",
     description:
       "There’s something magical about turning an idea into a beautiful interface that just *works*.",
     image: blog3Img,
