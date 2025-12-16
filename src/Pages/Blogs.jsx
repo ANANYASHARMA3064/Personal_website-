@@ -20,15 +20,8 @@ const blogs = [
     image: blog2Img,
     date: "September 30, 2025",
     link: "https://yourbloglink.com/code-and-college",
-  },
-  {
-    title: "uhh ?",
-    description:
-      "There’s something magical about turning an idea into a beautiful interface that just *works*.",
-    image: blog3Img,
-    date: "August 10, 2025",
-    link: "https://yourbloglink.com/frontend-love",
-  },
+  }
+ 
 ];
 
 const Blogs = () => {
