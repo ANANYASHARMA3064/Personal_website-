@@ -6,7 +6,7 @@ import blog3Img from "../assets/image.jpeg";
 
 const blogs = [
   {
-    title: "same same but different ",
+    title: " ",
     description:
       "describing 2 women with different choices ",
     image: blog1Img,
