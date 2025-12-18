@@ -8,7 +8,7 @@ const blogs = [
   {
     title: " ",
     description:
-      " ",
+      "I just want to sleep  ",
     image: blog1Img,
     date: "Jan 2026",
     link: "https://yourbloglink.com/react-app-journey",
