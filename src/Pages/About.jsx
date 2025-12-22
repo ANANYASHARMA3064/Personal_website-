@@ -14,7 +14,13 @@ import {
   SiExpress,
   SiPostgresql,
   SiMongodb,
+  SiNumpy,
+  SiPytorch,
+  SiPandas,
+  SiMysql,
+
 } from "react-icons/si";
+
 
 const About = () => {
   return (
@@ -99,6 +105,11 @@ const About = () => {
             { icon: <SiMongodb />, color: "#4DB33D", label: "MongoDB" },
             { icon: <SiPython />, color: "#3776AB", label: "Python" },
             { icon: <SiCplusplus />, color: "#00599C", label: "C++" },
+            { icon: <SiNumpy />, color: "#013243", label: "NumPy" },
+            { icon: <SiPytorch />, color: "#EE4C2C", label: "PyTorch" },
+            { icon: <SiPandas />, color: "#150458", label: "Pandas" },
+            { icon: <SiMysql />, color: "#4479A1", label: "MySQL" },
+            
           ].map((skill, index) => (
             <motion.div
               key={index}
